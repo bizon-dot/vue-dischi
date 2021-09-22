@@ -49,8 +49,11 @@
   @import './style/general';
 
   .container-album {
+    height: calc(100vh - 6.25em);
+    margin: 0 auto;
     background-color: $bg-main;
     display: grid;
+    align-items: center;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 20px 20px;
