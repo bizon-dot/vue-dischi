@@ -1,22 +1,24 @@
 <template>
-  <div class="container-album">
+  <div v-if="!loading" class="container-album">
     <div v-for="(dataSong, index) in dataAlbum" :key="index">
       <Card :dataSong='dataSong' />
     </div>
 
 
   </div>
-
+    <Loader v-else />
 </template>
 
 <script>
   import axios from 'axios';
   import Card from './Card.vue';
+  import Loader from './Loader.vue';
 
   export default {
     name: 'ContainerProducts',
     components: {
       Card,
+      Loader
     },
 
 
@@ -34,8 +36,8 @@
     methods: {
       getData() {
         axios.get(this.endPoint).then(res => {
-          console.log(res.data.response);
           this.dataAlbum = res.data.response;
+          this.loading = false;
         }).catch(err => {
           console.log("Error ", err);
         })
@@ -51,13 +53,13 @@
   .container-album {
     height: calc(100vh - 6.25em);
     width: 80%;
-    margin: 5px auto;
+    margin: em(5) auto;
     background-color: $bg-black-light;
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 20px 20px;
+    gap: em(20) em(20);
 
   }
 </style>
