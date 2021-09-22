@@ -27,8 +27,8 @@ export default {
       padding: 1em;
 
       .img-album{
-        width: 200px;
-        height: 200px;
+        width: em(200);
+        height: em(200);
         img {
           width:80%;
         }
