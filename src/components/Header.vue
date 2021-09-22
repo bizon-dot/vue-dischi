@@ -17,10 +17,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@import './style/general';
 
     .header{
       min-height: 5em;
-      background-color: #2E3A46;
+      background-color: $bg-header;
 
       .logo{
         height:6.25em;
