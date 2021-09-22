@@ -27,6 +27,14 @@ export default {
       align-items: center;
       padding: 1em;
 
+      .img-album{
+        width: 200px;
+        height: 200px;
+        img {
+          width:80%;
+        }
+      }
+
     }
 
 
