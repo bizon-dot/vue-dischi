@@ -1,7 +1,7 @@
 <template>
   <div class="container-album">
     <div v-for="(dataSong, index) in dataAlbum" :key="index">
-    <Card :dataSong='dataSong' />
+      <Card :dataSong='dataSong' />
     </div>
 
 
@@ -16,7 +16,7 @@
   export default {
     name: 'ContainerProducts',
     components: {
-          Card,
+      Card,
     },
 
 
@@ -50,5 +50,10 @@
 
   .container-album {
     background-color: $bg-main;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+
   }
 </style>
