@@ -21,7 +21,9 @@ export default {
 </script>
 
 <style lang="scss">
+@import './style/general';
 #app {
+  background-color: $bg-black-light;
 
 }
 </style>

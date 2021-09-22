@@ -3,6 +3,17 @@
     <div class="img-album">
         <img :src="dataSong.poster">
     </div>
+    <div class="title">
+      <h4>{{dataSong.title.toUpperCase()}}</h4>
+    </div>
+    <div class="info">
+      <p class="author">
+        {{dataSong.author}}
+      </p>
+      <p class="year">
+        {{dataSong.year}}
+      </p>
+    </div>
 
   </div>
   
@@ -22,9 +33,12 @@ export default {
 
      .card{
       display: flex;
+      max-height: em(350);
       flex-direction: column;
       align-items: center;
-      padding: 1em;
+      text-align: center;
+      background-color: $bg-black-noir;
+      padding: 0.5em;
 
       .img-album{
         width: em(200);
@@ -34,9 +48,23 @@ export default {
         }
       }
 
+      .title{
+        h4{
+          color:white;
+          font-weight: 600;
+        }
+      
     }
 
+      .info{
+          p.author,
+          p.year{
+            color:#6F7C7E
+          }
+      
+      }
 
+     }
 
 
 

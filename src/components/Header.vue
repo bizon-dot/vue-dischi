@@ -21,7 +21,7 @@ export default {
 
     .header{
       min-height: 5em;
-      background-color: $bg-header;
+      background-color: $bg-black-noir;
 
       .logo{
         height:6.25em;

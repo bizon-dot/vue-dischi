@@ -50,8 +50,9 @@
 
   .container-album {
     height: calc(100vh - 6.25em);
-    margin: 0 auto;
-    background-color: $bg-main;
+    width: 80%;
+    margin: 5px auto;
+    background-color: $bg-black-light;
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
