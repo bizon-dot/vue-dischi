@@ -2,7 +2,6 @@
   <div class="card">
     <div class="img-album">
         <img :src="dataSong.poster">
-       
     </div>
 
   </div>
