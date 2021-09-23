@@ -6,7 +6,7 @@
 
 
   </div>
-    <Loader v-else />
+  <Loader v-else />
 </template>
 
 <script>
@@ -40,16 +40,34 @@
           this.dataAlbum = res.data.response;
           this.loading = false;
           //Creo array con generi
-          
-           this.dataAlbum.forEach(element => {
-             if (!this.genre.includes(element.genre)) {
-               this.genre.push(element.genre)
-             }
+
+          this.dataAlbum.forEach(element => {
+            if (!this.genre.includes(element.genre)) {
+              this.genre.push(element.genre)
+            }
           });
+
+        
+          this.populateSelect();
+
+
+         
         }).catch(err => {
           console.log("Error ", err);
         })
-              console.log(this.genre);
+
+        // return this.genre;
+
+      },
+
+      populateSelect() {
+          const search = document.getElementById("genre");
+          search.innerHTML = ` `;
+          this.genre.forEach((type) => {
+              search.innerHTML += `
+             <option value="${type}">${type.toUpperCase()}</option>    
+        `
+            });
 
       }
     }
