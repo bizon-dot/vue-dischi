@@ -26,6 +26,7 @@
       return {
         endPoint: 'https://flynn.boolean.careers/exercises/api/array/music',
         dataAlbum: [],
+        genre: [],
         loading: true
       }
 
@@ -38,9 +39,18 @@
         axios.get(this.endPoint).then(res => {
           this.dataAlbum = res.data.response;
           this.loading = false;
+          //Creo array con generi
+          
+           this.dataAlbum.forEach(element => {
+             if (!this.genre.includes(element.genre)) {
+               this.genre.push(element.genre)
+             }
+          });
         }).catch(err => {
           console.log("Error ", err);
         })
+              console.log(this.genre);
+
       }
     }
   }

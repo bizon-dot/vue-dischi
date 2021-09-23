@@ -1,9 +1,5 @@
 <template>
 	<div class="loader">
-
-		<!--  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-        <path d="M18 13 L26 2 8 13 14 19 6 30 24 19 Z" />
-      </svg> -->
 		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Yin_yang.svg/512px-Yin_yang.svg.png" />
 	</div>
 
@@ -34,7 +30,7 @@
 	}
 
 	img {
-		width: 300px;
+		width: em(300);
 		margin: 1rem 0;
 		animation: rotate 1s infinite
 	}
