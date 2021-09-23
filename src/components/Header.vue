@@ -9,7 +9,7 @@
     <div class="search-by-genre">
       <select id="genre">
         <option value="">Please select</option>
-        <option value="one">One</option>
+       
 
       </select>
     </div>
